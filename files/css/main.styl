@@ -1,0 +1,409 @@
+fonts = 'PT Sans Narrow', Arial, Helvetica, sans-serif
+s = 1px
+
+html, body
+  font normal 16*s fonts
+  line-height 1
+
+#sp
+  background #f1f1f1
+  .sheet
+    position relative
+    background #f8f8f8
+    box-shadow 0 6*s 16*s rgba(0,0,0,.65)
+    transition all .4s linear
+    &:not(:last-child)
+      margin-bottom 20*s
+    .sheet-header
+      float left
+      .name
+        padding-left 60px
+        padding-right 20px
+        float left
+        background black
+        color white
+        text-transform uppercase
+        font-size 32*s
+        line-height 40*s
+      .text
+        clear both
+        padding-top 6px
+        padding-bottom 6px
+        padding-left 60px
+        font-size 22*s
+        line-height 24*s
+  #background
+    background-image url(../img/main-bg.jpg)
+  #top
+    #header
+      float left
+      width 100%
+      margin-bottom 250px
+      h1
+        float left
+        font-weight bold
+        text-transform uppercase
+        letter-spacing .1em
+        line-height 30*s
+        padding-left 20*s
+      .socials
+        float right
+        .social
+          display block
+          float left
+          height 30*s
+          padding 0 5px
+          font-size 20*s
+          line-height 30*s
+          transition background-color .2s linear, color .2s linear
+          color black
+          &.vk
+            color #45668e
+            &:hover
+              color white
+              background #45668e
+          &.skype
+            color #12A5F4
+            &:hover
+              color white
+              background #12A5F4
+          &.phone
+            color black
+            &:hover
+              color white
+              background black
+          &.gmail
+            color #b23121
+            &:hover
+              color white
+              background #b23121
+          &:not(:last-child)
+            margin-right 5px
+    #content
+      float left
+      width 100%
+      .begin
+        margin-top 100px
+        position relative
+        height 100px
+        padding-bottom 20px
+        margin-bottom 10px
+        border-bottom 1*s dashed #cecece
+        .blockquote
+          z-index 1
+          position absolute
+          top 0
+          right 50*s
+          width 250*s
+          height 100*s
+          .quotes
+            overflow hidden
+            position absolute
+            top -90*s
+            left 0
+            bottom 0
+            right 0
+            z-index 10
+            color #dedede
+            font-size 400*s
+            text-align right
+            font-style italic
+            font-family "Times New Roman"
+            .quote:nth-child(1)
+              vertical-align top
+              position absolute
+              top 0
+              left 50*s
+            .quote:nth-child(2)
+              vertical-align top
+              position absolute
+              top 0
+              left 100*s
+          .message
+            float left
+            position relative
+            z-index 15
+            .text
+              font-size 20*s
+              line-height 1
+              color #818181
+              margin-bottom 15*s
+            .author
+              color #919191
+              font-size 18*s
+              text-align right
+        .photoborder
+          position absolute
+          top -200*s
+          left 50%
+          margin-left -100*s
+          border-radius 100*s
+          width 200*s
+          height 200*s
+          border 4*s solid white
+        .photo-input
+          display none
+          &:checked ~ .photo-label
+            border 4*s solid white
+            transform scale(2)
+        .photo-label
+          position absolute
+          top -200*s
+          left 50%
+          margin-left -100*s
+          border-radius 100*s
+          width 200*s
+          height 200*s
+          border 4*s solid white
+          background-size 200px 200px
+          background-repeat no-repeat
+          background-position center center
+          background-image url(../img/photo600.jpg)
+          background-color #f8f8f8
+          box-shadow inset 0 0 10px rgba(0,0,0,0.35)
+          transition all .2s linear
+          &:hover
+            cursor pointer
+            box-shadow inset 0 0 10px rgba(0,0,0,0.35), 0 0 10*s rgba(18, 165, 244, 0.65)
+    .tab-contents
+      #tab-input1:checked ~ #tab-label1
+      #tab-input2:checked ~ #tab-label2
+      #tab-input3:checked ~ #tab-label3
+        border-bottom 3px solid black
+        color red
+      #tab-input1:checked ~ #tab-content1
+      #tab-input2:checked ~ #tab-content2
+      #tab-input3:checked ~ #tab-content3
+        height auto
+        opacity 1
+      .after-tabs
+        height 0
+        margin 10*s 0 20*s 0
+        border-bottom 1*s dashed #cecece
+      .tab-label
+        position relative
+        float left
+        display block
+        height 30px
+        line-height 30px
+        transition all .2s linear
+        color black
+        text-transform uppercase
+        letter-spacing .1em
+        cursor pointer
+        border-bottom 3px solid transparent
+        &:hover
+          border-bottom 3px solid black
+        &#tab-label1
+          margin-left 60*s
+        &:not(#tab-label1)
+          margin-left 20px
+          &:before
+            content ""
+            top 0
+            left 0
+            width 1px
+            background transparent
+            height 100%
+            position absolute
+      .tab-input
+        display none
+      .tab-content
+        float left
+        opacity 0
+        height 0
+        overflow hidden
+        transition all .4s linear
+        .column
+          margin-bottom 20*s
+          .sheet-header
+            float none
+            .name
+              float none
+              text-align center
+          &.full
+            float left
+            width 100%
+            .content
+              margin-left 60*s
+              margin-right 60*s
+          &.left
+            float left
+            width 48%
+            .content
+              margin-left 60*s
+              margin-right 20*s
+          &.right
+            float right
+            width 48%
+            .content
+              margin-left 20*s
+              margin-right 60*s
+        .content
+          float left
+          display table
+          clear both
+          width 1080*s
+          position relative
+          margin-top 20*s
+          margin-bottom 20*s
+          font-size 18*s
+          line-height 1.3
+          .paragraph
+            float left
+            clear both
+            margin-bottom 10*s
+            .mark
+              width 30*s
+              float left
+              display table-cell
+            .text
+              display table-cell
+            &.work
+              width 48%
+              clear none
+              margin-bottom 20*s
+              &:nth-child(even)
+                float right
+              &:nth-child(odd)
+                float left
+              .mark
+                width 150*s
+                margin-right 20*s
+                .photo
+                  width 150*s
+                  height 150*s
+                  img
+                    max-width 150*s
+                    max-height 150*s
+                    transition all .2s linear
+                  &:hover
+                    img
+                      transform scale(1.3)
+              .text
+                .middle
+                  min-height 150*s
+
+  #spacer
+    float left
+  #bottom
+    #footer
+      float left
+  #messages
+    z-index 20
+    position fixed
+    top 0
+    right 0
+    left 0
+    height 0
+    .message
+      background white
+      margin 8*s 0
+      border-radius 3*s
+      font-size 16*s
+      box-shadow 0 2*s 6*s rgba(0,0,0,0.35)
+      &.active
+        opacity 1
+      .message-a
+        top 20*s
+        right 20*s
+        left 80*s
+        bottom 20*s
+        background white
+
+
+p, table, form, hr, div, ul
+  &:not(:last-child):not(:empty):not([class]):not([id])
+    margin-bottom 10*s
+
+a
+  color #28f
+  text-decoration none
+  &:link
+    text-decoration none
+  &:visited
+    text-decoration none
+  &:hover
+    text-decoration none
+
+a:not([class]):not([id])
+  text-decoration underline
+  &:link
+    text-decoration underline
+  &:visited
+    text-decoration underline
+  &:hover
+    text-decoration none
+
+input[type="text"],
+select,
+textarea
+  font-size 14*s
+  text-align left
+  padding 6*s 4*s
+  border 1*s solid #cecece
+  color #888
+  box-shadow inset 1*s 1*s 1*s 0 rgba(0,0,0,0.15)
+
+input[type="text"].error,
+select.error,
+textarea.error,
+input[type="text"].error:hover,
+select.error:hover,
+textarea.error:hover,
+input[type="text"].error:focus,
+select.error:focus,
+textarea.error:focus,
+input[type="text"].error:focus:hover,
+select.error:focus:hover,
+textarea.error:focus:hover
+  border 1*s solid #f00
+
+input[type="text"]:hover,
+select:hover,
+textarea:hover
+  color #333
+  border 1*s solid #888
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus
+  color #333
+  border 1*s solid #4285f4
+
+.btn
+  float left
+  display block
+  color #fff
+  padding 0 10*s
+  border-top-left-radius 2*s
+  border-top-right-radius 2*s
+  border-bottom-left-radius 2*s
+  border-bottom-right-radius 2*s
+  cursor default !important
+  line-height 28*s
+  background #4285f4
+  border 1*s solid transparent
+  text-decoration none !important
+  font-size 16*s
+  span
+  img,
+  i
+    vertical-align middle
+  &.btn-top
+    border-top-left-radius 0
+    border-top-right-radius 0
+  &.btn-left
+    border-top-left-radius 0
+    border-bottom-left-radius 0
+  &.btn-right
+    border-top-right-radius 0
+    border-bottom-right-radius 0
+  &.btn-bottom
+    border-bottom-left-radius 0
+    border-bottom-right-radius 0
+  &:active
+    background #3c7ae4
+  &:hover
+    box-shadow 0 1*s 0 rgba(0,0,0,0.15), inset 0 0 0 1*s rgba(255,255,255,0.5)
+    text-decoration none !important

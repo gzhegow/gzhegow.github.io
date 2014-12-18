@@ -1,0 +1,112 @@
+html
+  line-height 1
+  vertical-align baseline
+
+html, body
+  width 100%
+  height 100%
+
+#sp
+  float left
+  width 100%
+  min-height 100%
+  height auto !important
+  position relative
+  overflow-y scroll
+  overflow-x hidden
+  #background
+    z-index 5
+    position fixed
+    background-position top center
+    background-size 100% auto
+    top 0
+    left 0
+    right 0
+    bottom 0
+  #top
+    float left
+    width 100%
+    position relative
+    z-index 10
+    #wrapper
+      float left
+      width 100%
+      position relative
+    #spacer
+      float left
+      width 100%
+  #bottom
+    float left
+    width 100%
+    position absolute
+    bottom 0
+    z-index 15
+  #blackscreen
+    display none
+    transition opacity .4s linear
+    position fixed
+    opacity 0
+    z-index 20
+    background-color rgba(0,0,0, 0.75)
+    background-attachment scroll
+    background-repeat repeat-y
+    top 0
+    left 0
+    width 100%
+    height 100%
+  #modals
+    display none
+    transition opacity .4s linear
+    opacity 0
+    position fixed
+    top 0
+    left 0
+    bottom 0
+    right 0
+  #messages
+    z-index 20
+    position fixed
+    top 0
+    right 0
+    left 0
+    height 0
+    .messages-a
+      float left
+      position relative
+      .message
+        transition opacity .4s linear, height .4s linear
+        position relative
+        opacity 0
+        &.active
+          opacity 1
+        .message-a
+          float left
+          position relative
+
+.line
+  width 100%
+  float left
+  clear both
+  position relative
+  display block
+
+table
+  border-collapse collapse
+  border-spacing 0
+  width 100%
+
+.centered
+  width 100%
+  margin 0 auto
+  position relative
+
+b, strong
+  font-weight 700
+
+i
+  font-style italic
+
+table.middle
+  height 100%
+  td
+    vertical-align middle
