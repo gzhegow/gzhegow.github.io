@@ -17,9 +17,9 @@ html, body
     .sheet-header
       float left
       .name
-        padding-left 60px
-        padding-right 20px
         float left
+        padding-left 25*s
+        padding-right 20*s
         background black
         color white
         text-transform uppercase
@@ -27,11 +27,26 @@ html, body
         line-height 40*s
       .text
         clear both
-        padding-top 6px
-        padding-bottom 6px
-        padding-left 60px
+        float left
+        padding-top 6*s
+        padding-bottom 6*s
+        padding-left 25*s
         font-size 22*s
         line-height 24*s
+    .column-header
+      float left
+      .name
+        width 100%
+        float left
+        text-align left
+        background black
+        color white
+        text-transform uppercase
+        font-size 32*s
+        line-height 40*s
+        span
+          padding-left 25*s
+          padding-right 25*s
   #background
     background-image url(../img/main-bg.jpg)
   #top
@@ -45,7 +60,7 @@ html, body
         text-transform uppercase
         letter-spacing .1em
         line-height 30*s
-        padding-left 20*s
+        padding-left 25*s
       .socials
         float right
         .social
@@ -85,15 +100,13 @@ html, body
       .begin
         margin-top 100px
         position relative
-        height 100px
         padding-bottom 20px
         margin-bottom 10px
         border-bottom 1*s dashed #cecece
         .blockquote
-          z-index 1
-          position absolute
-          top 0
-          right 50*s
+          float right
+          position relative
+          margin-right 50*s
           width 250*s
           height 100*s
           .quotes
@@ -169,17 +182,22 @@ html, body
       #tab-input1:checked ~ #tab-label1
       #tab-input2:checked ~ #tab-label2
       #tab-input3:checked ~ #tab-label3
+      #tab-input4:checked ~ #tab-label4
         border-bottom 3px solid black
         color red
+
       #tab-input1:checked ~ #tab-content1
       #tab-input2:checked ~ #tab-content2
       #tab-input3:checked ~ #tab-content3
+      #tab-input4:checked ~ #tab-content4
         height auto
         opacity 1
+
       .after-tabs
         height 0
         margin 10*s 0 20*s 0
         border-bottom 1*s dashed #cecece
+
       .tab-label
         position relative
         float left
@@ -194,10 +212,12 @@ html, body
         border-bottom 3px solid transparent
         &:hover
           border-bottom 3px solid black
+
         &#tab-label1
-          margin-left 60*s
+          margin-left 25*s
+
         &:not(#tab-label1)
-          margin-left 20px
+          margin-left 2%
           &:before
             content ""
             top 0
@@ -206,39 +226,44 @@ html, body
             background transparent
             height 100%
             position absolute
+
       .tab-input
         display none
+
       .tab-content
         float left
         opacity 0
         height 0
         overflow hidden
         transition all .4s linear
+
         .column
           margin-bottom 20*s
+
           .sheet-header
-            float none
             .name
-              float none
               text-align center
-          &.full
-            float left
-            width 100%
-            .content
-              margin-left 60*s
-              margin-right 60*s
+
           &.left
             float left
             width 48%
-            .content
-              margin-left 60*s
-              margin-right 20*s
+
+            .column-header
+              .name
+                span
+                  padding-left 25*s
+                  padding-right 25*s
+
           &.right
             float right
             width 48%
-            .content
-              margin-left 20*s
-              margin-right 60*s
+
+            .column-header
+              .name
+                span
+                  padding-left 25*s
+                  padding-right 25*s
+
         .content
           float left
           display table
@@ -248,9 +273,11 @@ html, body
           margin-bottom 20*s
           font-size 18*s
           line-height 1.3
+
           .paragraph
             float left
             clear both
+            padding-left 25*s
             margin-bottom 10*s
             .mark
               width 30*s
@@ -258,30 +285,87 @@ html, body
               display table-cell
             .text
               display table-cell
+
             &.work
-              width 48%
-              clear none
               margin-bottom 20*s
-              &:nth-child(even)
-                float right
-              &:nth-child(odd)
-                float left
               .mark
-                width 150*s
+                float left
+                width 200*s
                 margin-right 20*s
-                .photo
-                  width 150*s
-                  height 150*s
-                  img
-                    max-width 150*s
-                    max-height 150*s
-                    transition all .2s linear
+                position relative
+                z-index 10
+                text-align center
+                .photo-wrapper
+                  display block
+                  float left
+                  width 200*s
+                  height 200*s
+                  text-align center
+                  transition all .6s ease-out
+                  transform scale(0.85)
                   &:hover
-                    img
-                      transform scale(1.3)
+                    transform scale(1)
+                .photo-shadow
+                  position absolute
+                  z-index 1
+                  content ""
+                  bottom 0
+                  left 50%
+                  margin-left -50*s
+                  width 100*s
+                  height 20*s
+                  border-radius 50*s / 10*s
+                  background rgba(0,0,0,0.15)
+                  box-shadow 0 0 10px 5px rgba(0,0,0,0.15)
+                .photo-outer-border
+                  position relative
+                  z-index 2
+                  width 198*s
+                  height 198*s
+                  background white
+                  box-shadow 0 0 0 rgba(0,0,0,0)
+                  border 1*s solid #cecece
+                  border-radius 100*s
+                  transition all .2s linear
+                  &:hover
+                    box-shadow 0 0 10*s rgba(18, 165, 244, 0.65)
+                .photo-inner-border
+                  position relative
+                  width 188*s
+                  height 188*s
+                  margin 5*s
+                  overflow hidden
+                  border-radius 94*s
+                  .photo-inner-shadow
+                    position absolute
+                    top 0
+                    left 0
+                    z-index 3
+                    box-shadow inset 0 0 10px rgba(0,0,0,0.35)
+                    width 188*s
+                    height 188*s
+                    border-radius 94*s
+                  .photo
+                    width 100%
+                    height 100%
               .text
                 .middle
-                  min-height 150*s
+                  vertical-align middle
+                  min-height 200*s
+                  line-height 1
+                  p
+                    margin-bottom 4*s
+                  .comment
+                    font-size 15*s
+                    vertical-align baseline
+                  .top
+                    font-size 20*s
+                    margin-bottom 5*s
+                    vertical-align baseline
+                  .link
+                    font-size 14*s
+                    margin-bottom 12*s
+                    vertical-align baseline
 
   #spacer
     float left

@@ -19,9 +19,9 @@ body {
   float: left;
 }
 #sp .sheet .sheet-header .name {
-  padding-left: 60px;
-  padding-right: 20px;
   float: left;
+  padding-left: 25px;
+  padding-right: 20px;
   background: #000;
   color: #fff;
   text-transform: uppercase;
@@ -30,11 +30,29 @@ body {
 }
 #sp .sheet .sheet-header .text {
   clear: both;
+  float: left;
   padding-top: 6px;
   padding-bottom: 6px;
-  padding-left: 60px;
+  padding-left: 25px;
   font-size: 22px;
   line-height: 24px;
+}
+#sp .sheet .column-header {
+  float: left;
+}
+#sp .sheet .column-header .name {
+  width: 100%;
+  float: left;
+  text-align: left;
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 32px;
+  line-height: 40px;
+}
+#sp .sheet .column-header .name span {
+  padding-left: 25px;
+  padding-right: 25px;
 }
 #sp #background {
   background-image: url("../img/main-bg.jpg");
@@ -50,7 +68,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   line-height: 30px;
-  padding-left: 20px;
+  padding-left: 25px;
 }
 #sp #top #header .socials {
   float: right;
@@ -103,16 +121,14 @@ body {
 #sp #top #content .begin {
   margin-top: 100px;
   position: relative;
-  height: 100px;
   padding-bottom: 20px;
   margin-bottom: 10px;
   border-bottom: 1px dashed #cecece;
 }
 #sp #top #content .begin .blockquote {
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  right: 50px;
+  float: right;
+  position: relative;
+  margin-right: 50px;
   width: 250px;
   height: 100px;
 }
@@ -198,13 +214,15 @@ body {
 }
 #sp #top .tab-contents #tab-input1:checked ~ #tab-label1,
 #sp #top .tab-contents #tab-input2:checked ~ #tab-label2,
-#sp #top .tab-contents #tab-input3:checked ~ #tab-label3 {
+#sp #top .tab-contents #tab-input3:checked ~ #tab-label3,
+#sp #top .tab-contents #tab-input4:checked ~ #tab-label4 {
   border-bottom: 3px solid #000;
   color: #f00;
 }
 #sp #top .tab-contents #tab-input1:checked ~ #tab-content1,
 #sp #top .tab-contents #tab-input2:checked ~ #tab-content2,
-#sp #top .tab-contents #tab-input3:checked ~ #tab-content3 {
+#sp #top .tab-contents #tab-input3:checked ~ #tab-content3,
+#sp #top .tab-contents #tab-input4:checked ~ #tab-content4 {
   height: auto;
   opacity: 1;
 }
@@ -230,10 +248,10 @@ body {
   border-bottom: 3px solid #000;
 }
 #sp #top .tab-contents .tab-label#tab-label1 {
-  margin-left: 60px;
+  margin-left: 25px;
 }
 #sp #top .tab-contents .tab-label:not(#tab-label1) {
-  margin-left: 20px;
+  margin-left: 2%;
 }
 #sp #top .tab-contents .tab-label:not(#tab-label1):before {
   content: "";
@@ -257,36 +275,24 @@ body {
 #sp #top .tab-contents .tab-content .column {
   margin-bottom: 20px;
 }
-#sp #top .tab-contents .tab-content .column .sheet-header {
-  float: none;
-}
 #sp #top .tab-contents .tab-content .column .sheet-header .name {
-  float: none;
   text-align: center;
-}
-#sp #top .tab-contents .tab-content .column.full {
-  float: left;
-  width: 100%;
-}
-#sp #top .tab-contents .tab-content .column.full .content {
-  margin-left: 60px;
-  margin-right: 60px;
 }
 #sp #top .tab-contents .tab-content .column.left {
   float: left;
   width: 48%;
 }
-#sp #top .tab-contents .tab-content .column.left .content {
-  margin-left: 60px;
-  margin-right: 20px;
+#sp #top .tab-contents .tab-content .column.left .column-header .name span {
+  padding-left: 25px;
+  padding-right: 25px;
 }
 #sp #top .tab-contents .tab-content .column.right {
   float: right;
   width: 48%;
 }
-#sp #top .tab-contents .tab-content .column.right .content {
-  margin-left: 20px;
-  margin-right: 60px;
+#sp #top .tab-contents .tab-content .column.right .column-header .name span {
+  padding-left: 25px;
+  padding-right: 25px;
 }
 #sp #top .tab-contents .tab-content .content {
   float: left;
@@ -301,6 +307,7 @@ body {
 #sp #top .tab-contents .tab-content .content .paragraph {
   float: left;
   clear: both;
+  padding-left: 25px;
   margin-bottom: 10px;
 }
 #sp #top .tab-contents .tab-content .content .paragraph .mark {
@@ -312,34 +319,98 @@ body {
   display: table-cell;
 }
 #sp #top .tab-contents .tab-content .content .paragraph.work {
-  width: 48%;
-  clear: none;
   margin-bottom: 20px;
 }
-#sp #top .tab-contents .tab-content .content .paragraph.work:nth-child(even) {
-  float: right;
-}
-#sp #top .tab-contents .tab-content .content .paragraph.work:nth-child(odd) {
-  float: left;
-}
 #sp #top .tab-contents .tab-content .content .paragraph.work .mark {
-  width: 150px;
+  float: left;
+  width: 200px;
   margin-right: 20px;
+  position: relative;
+  z-index: 10;
+  text-align: center;
 }
-#sp #top .tab-contents .tab-content .content .paragraph.work .mark .photo {
-  width: 150px;
-  height: 150px;
+#sp #top .tab-contents .tab-content .content .paragraph.work .mark .photo-wrapper {
+  display: block;
+  float: left;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  transition: all 0.6s ease-out;
+  transform: scale(0.85);
 }
-#sp #top .tab-contents .tab-content .content .paragraph.work .mark .photo img {
-  max-width: 150px;
-  max-height: 150px;
+#sp #top .tab-contents .tab-content .content .paragraph.work .mark .photo-wrapper:hover {
+  transform: scale(1);
+}
+#sp #top .tab-contents .tab-content .content .paragraph.work .mark .photo-shadow {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  bottom: 0;
+  left: 50%;
+  margin-left: -50px;
+  width: 100px;
+  height: 20px;
+  border-radius: 50px/10px;
+  background: rgba(0,0,0,0.15);
+  box-shadow: 0 0 10px 5px rgba(0,0,0,0.15);
+}
+#sp #top .tab-contents .tab-content .content .paragraph.work .mark .photo-outer-border {
+  position: relative;
+  z-index: 2;
+  width: 198px;
+  height: 198px;
+  background: #fff;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  border: 1px solid #cecece;
+  border-radius: 100px;
   transition: all 0.2s linear;
 }
-#sp #top .tab-contents .tab-content .content .paragraph.work .mark .photo:hover img {
-  transform: scale(1.3);
+#sp #top .tab-contents .tab-content .content .paragraph.work .mark .photo-outer-border:hover {
+  box-shadow: 0 0 10px rgba(18,165,244,0.65);
+}
+#sp #top .tab-contents .tab-content .content .paragraph.work .mark .photo-inner-border {
+  position: relative;
+  width: 188px;
+  height: 188px;
+  margin: 5px;
+  overflow: hidden;
+  border-radius: 94px;
+}
+#sp #top .tab-contents .tab-content .content .paragraph.work .mark .photo-inner-border .photo-inner-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.35);
+  width: 188px;
+  height: 188px;
+  border-radius: 94px;
+}
+#sp #top .tab-contents .tab-content .content .paragraph.work .mark .photo-inner-border .photo {
+  width: 100%;
+  height: 100%;
 }
 #sp #top .tab-contents .tab-content .content .paragraph.work .text .middle {
-  min-height: 150px;
+  vertical-align: middle;
+  min-height: 200px;
+  line-height: 1;
+}
+#sp #top .tab-contents .tab-content .content .paragraph.work .text .middle p {
+  margin-bottom: 4px;
+}
+#sp #top .tab-contents .tab-content .content .paragraph.work .text .middle .comment {
+  font-size: 15px;
+  vertical-align: baseline;
+}
+#sp #top .tab-contents .tab-content .content .paragraph.work .text .middle .top {
+  font-size: 20px;
+  margin-bottom: 5px;
+  vertical-align: baseline;
+}
+#sp #top .tab-contents .tab-content .content .paragraph.work .text .middle .link {
+  font-size: 14px;
+  margin-bottom: 12px;
+  vertical-align: baseline;
 }
 #sp #spacer {
   float: left;
