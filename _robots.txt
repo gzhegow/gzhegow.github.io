@@ -1,0 +1,24 @@
+User-agent: Yandex
+Disallow: /logs
+Disallow: /framework/
+Disallow: /app/
+Disallow: /assets/
+Disallow: /_docs/
+Host: milgames.by
+
+User-agent: Googlebot
+Disallow: /logs
+Disallow: /framework/
+Disallow: /app/
+Disallow: /assets/
+Disallow: /_docs/
+
+User-agent: *
+Crawl-delay: 30
+Disallow: /logs
+Disallow: /framework/
+Disallow: /app/
+Disallow: /assets/
+Disallow: /_docs/
+
+Sitemap: http://milgames.by/sitemap.xml

@@ -1,0 +1,1 @@
+<meta name="<? echo $name;?>" content="<? echo $content;?>"/>

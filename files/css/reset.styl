@@ -4,10 +4,10 @@
   border 0
   border-collapse collapse
   border-spacing 0
+  box-sizing border-box
   outline 0
   outline-offset 0
-  text-align inherit
-  vertical-align inherit
+  outline-style none
   background transparent
   color inherit
   font inherit
@@ -16,42 +16,13 @@
   font-size inherit
   resize none
   cursor inherit
-  line-height inherit
-
-body
   line-height normal
+  text-align inherit
 
-table
-  border-collapse collapse
-  border-spacing 0
-
-ol
-  list-style-type none
-
-ul
-  list-style-type disc
-
+ul,
 ol,
-ul
+li
   display block
-
-b
-  font-weight bold
-
-strong
-  font-weight bolder
-
-em
-  font-style italic
-
-input:-webkit-autofill,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active,
-input:-webkit-autofill:hover
-  background transparent !important
-  background-color transparent !important
-  background-image none !important
-  color #000 !important
 
 article,
 aside,
@@ -66,22 +37,20 @@ nav,
 section
   display block
 
-blockquote,
-q
+ol,
+ul,
+  list-style-type none
+
+table
+  td,
+  th
+    height 100%
+    min-height 100%
+    vertical-align middle
+
+q,
+blockquote
   quotes none
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after
-  content ''
-  content none
-
-input[type="submit"],
-input[type="button"],
-input[type="image"],
-input[type="reset"]
-  cursor pointer
-
-*:focus
-  outline-style none
+  &:before,
+  &:after
+    content ''
