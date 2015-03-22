@@ -1,0 +1,122 @@
+html {
+  position: relative;
+}
+* {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+}
+body {
+  position: relative;
+  border: 0;
+  border-collapse: collapse;
+  border-color: transparent;
+  border-spacing: 0;
+  border-style: none;
+  border-width: 0;
+  box-sizing: border-box;
+  color: #000;
+  height: auto;
+  letter-spacing: normal;
+  line-height: normal;
+  margin: 0;
+  outline: none;
+  outline-color: transparent;
+  outline-style: none;
+  outline-width: 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  white-space: normal;
+  width: auto;
+  word-spacing: normal;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 14px;
+}
+body * {
+  text-align: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  border-collapse: inherit;
+  border-color: inherit;
+  border-spacing: inherit;
+  box-sizing: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  outline-color: inherit;
+  white-space: inherit;
+  word-spacing: inherit;
+}
+body a {
+  text-decoration: none;
+}
+body a:link,
+body a:visited,
+body a:hover {
+  text-decoration: none;
+}
+body a:not([class]):not([id]) {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+body a:not([class]):not([id]):link,
+body a:not([class]):not([id]):visited {
+  text-decoration: none;
+}
+body a:not([class]):not([id]):hover {
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+body table.e-center {
+  width: 100%;
+  height: 100%;
+}
+body table.e-center > tbody > tr > td {
+  vertical-align: middle;
+}
+body .line {
+  position: relative;
+  float: left;
+  width: 100%;
+  clear: both;
+}
+body .centered {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  clear: both;
+}
+body .main {
+  text-align: center;
+}
+body .main .main-in {
+  line-height: 30px;
+}
+body .main .main-in .h1 {
+  font-size: 24px;
+  text-transfrom: uppercase;
+  margin-bottom: 10px;
+}
+body .main .main-in .h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+body .main .main-in .content {
+  line-height: 20px;
+  padding: 5px 0;
+}
+body .main .main-in .content * {
+  vertical-align: middle;
+}
+body .main .main-in .content p:not(:last-child) {
+  margin-bottom: 10px;
+}
+body .main .main-in .content .loading {
+  max-height: 30px;
+  margin-right: 10px;
+}
