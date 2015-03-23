@@ -1,0 +1,134 @@
+s = 1px
+$default = Helvetica, Arial, sans-serif
+
+html
+  font-family $default
+  color #000
+
+  #background
+    position fixed
+    top 0
+    left 0
+    right 0
+    bottom 0
+    width 100%
+    height 100%
+
+  a.invert
+    border-bottom-width 1*s
+    border-bottom-style solid
+    &:hover
+      border-bottom-color transparent
+
+  .redirect
+    text-align center
+    margin-bottom 20*s
+
+    .redirect-in
+      line-height 20*s
+      padding 5*s 0
+      min-height 30*s
+      text-align center
+
+      p
+        &:not(:last-child)
+          margin-bottom 10*s
+
+      span
+        vertical-align middle
+
+      .img-loading
+        vertical-align middle
+        max-height 30*s
+        margin-right 10*s
+
+  .cloud
+    padding 40*s 0
+    border-top 1*s solid #e1e8ed
+    border-bottom 1*s solid #e1e8ed
+    background-color #f5f5f5
+    
+    .sidebar
+      padding 0 20*s
+      .header
+        margin-bottom 10*s
+      .ph
+        font-size 80%
+
+    .tags
+      text-align center
+      .tag
+        display inline-block
+        line-height 30*s
+        color #fff
+        & > a
+          padding 3*s 10*s
+          border-radius 3*s
+          background-color #efaaaa
+          &:hover
+            background-color #aaaaef
+
+      .tooltip
+        cursor pointer
+        position relative
+        text-align left
+
+        &.left
+          .append
+            left 0
+            margin-left 0
+            .message
+              &:before
+                left 10%
+
+        &.right
+          .append
+            right 0
+            margin-left 0
+            .message
+              &:before
+                right 10%
+
+        .append
+          top 100%
+          left 50%
+          margin-left -150*s
+          position absolute
+          visibility hidden
+          z-index 50
+          opacity 0
+          transition none
+          -webkit-transition none
+          -moz-transition none
+          width 300*s
+          .message
+            margin-top 10*s
+            position relative
+            background-color rgba(#000, 0.75)
+            box-shadow 0 0 8*s rgba(0,0,0,0.35)
+            padding 20*s
+            color #fff
+            &:before
+              content ""
+              position absolute
+              top -20*s
+              left 50%
+              margin-left -5*s
+              border 10*s solid transparent
+              border-bottom 10*s solid rgba(#000, 0.75)
+            .header
+              margin-bottom 10*s
+              font-size 100%
+            .ph
+              font-size 80%
+              &:not(:last-child)
+                margin-bottom 10*s
+
+        &:hover
+          .append
+            opacity 1
+            visibility visible
+            z-index 55
+            transition opacity .3s ease-out 1s, visibility .3s ease-out 1s
+            -webkit-transition opacity .3s ease-out 1s, visibility .3s ease-out 1s
+            -moz-transition opacity .3s ease-out 1s, visibility .3s ease-out 1s
